@@ -1,5 +1,4 @@
 //Learnign about High Order Functions
-
 const numbers = [1,2,3,4,5,6];
 
 const double = x => x * 2;
