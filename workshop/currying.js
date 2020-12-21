@@ -1,7 +1,11 @@
 //Learning about currying
 
-const plusValues = x => y => x+y;
-console.log(plusValues(2)(3));
+function plusValues(x){
+    return (y) => {
+        return (x+y);
+    }
+}
+console.log(plusValues(2)(4));
 
 const increment = plusValues(1);
 console.log(increment(1));

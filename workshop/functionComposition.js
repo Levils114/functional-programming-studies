@@ -18,9 +18,20 @@ const users = [
 ];
 
 const adminUsers = user => user.admin;
-const getAge = user => user.age;
+const getAges = user => user.age;
 const sum = reduce(add, 0)
 
-const plusAdminUsersAge = pipe(filter(adminUsers), map(getAge), sum);
+const log = curry((tag, value) => {
+    console.log(tag,':', value)
+    return value;
+});
+
+const plusAdminUsersAge = pipe(
+    filter(adminUsers), 
+    log('Admin Users'),
+    map(getAges), 
+    log('Ages'),
+    sum
+);
 
 console.log(plusAdminUsersAge(users));

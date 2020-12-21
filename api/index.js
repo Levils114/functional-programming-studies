@@ -7,7 +7,7 @@ const data = require('./data')
 
 const config = {
   api: {
-    port: process.env.PORT,
+    port: 3001,
   },
 }
 
